@@ -1,3 +1,13 @@
+import asyncio
+import aiohttp
+import sys
+from bs4 import BeautifulSoup
+from urllib.parse import urlparse
+from contextlib import closing
+import http.client
+
+
+
 def get_images_src_from_html(html_doc):    
     
     soup = BeautifulSoup(html_doc, "html.parser")    
