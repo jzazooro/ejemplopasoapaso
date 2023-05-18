@@ -27,8 +27,7 @@ def get_uri_from_images_src(base_uri, images_src):
                 if parsed_base.path == '/':    
                     path = '/' + path    
                 else:    
-                    path = '/' + '/'.join(parsed_base.path.split('/')   
-[:-1]) + '/' + path    
+                    path = '/' + '/'.join(parsed_base.path.split('/')   [:-1]) + '/' + path    
             yield parsed_base.scheme + '://' + parsed_base.netloc + path  
         else:    
             yield parsed.geturl() 
